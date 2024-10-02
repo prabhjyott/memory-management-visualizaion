@@ -99,3 +99,4 @@ if __name__ == "__main__":
     memory_manager = MemoryManager(num_frames)
     app = MemoryVisualization(memory_manager)
     app.mainloop()
+#what
