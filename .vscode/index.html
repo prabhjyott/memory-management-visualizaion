@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Allocation Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Allocation Visualizer</h1>
+        <div class="memory">
+            {% for frame in memory %}
+            <div class="frame">
+                {{ frame }}
+            </div>
+            {% endfor %}
+        </div>
+        <h3>Total Page Faults: {{ page_faults }}</h3>
+        <form action="/" method="POST">
+            <input type="text" name="pages" placeholder="1, 2, 3, 1, 4, 2">
+            <button type="submit">Simulate</button>
+        </form>
+    </div>
+</body>
+</html>
